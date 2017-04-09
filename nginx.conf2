@@ -2,9 +2,9 @@ server
     {
         listen 80;
         #listen [::]:80;
-        server_name www.tp-shop.cn;
+        server_name www.995078.com;
         index index.html index.htm index.php default.html default.htm default.php;
-        root  /home/wwwroot/www.tp-shop.cn;
+        root  /home/wwwroot/default;
 
        location / {
             index  index.htm index.html index.php;  
@@ -20,7 +20,7 @@ server
 		break;
 	}
         location ~ \.php/?.*$ {
-	    root  /home/wwwroot/www.tp-shop.cn;
+	    root  /home/wwwroot/default;
             fastcgi_pass  unix:/tmp/php-cgi.sock;
             fastcgi_index  index.php;
             fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;           
@@ -43,13 +43,13 @@ server
 
 	location ~.*\.(jpg|png|jpeg)$
       	{
-	    root  /home/wwwroot/www.tp-shop.cn;
+	    root  /home/wwwroot/default;
        	    #expires 30d;
         }
 
      # js css缓存一小时
        location ~.*\.(js|css)$ {
-           root  /home/wwwroot/www.tp-shop.cn;
+           root  /home/wwwroot/default;
            #expires 1h;
        }
         include other.conf;
@@ -70,6 +70,6 @@ server
         {
             deny all;
         }
-	error_log  /home/wwwlogs/www.tp-shop.cn.err;
-        access_log  /home/wwwlogs/www.tp-shop.cn.log;
+	error_log  /home/wwwlogs/www.995078.com.err;
+        access_log  /home/wwwlogs/www.995078.com.log;
     }
