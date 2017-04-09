@@ -52,7 +52,7 @@ server
            root  /home/wwwroot/default;
            #expires 1h;
        }
-        include other.conf;
+        #include other.conf;
         #error_page   404   /404.html;
         include enable-php.conf;
 
@@ -70,6 +70,6 @@ server
         {
             deny all;
         }
-	error_log  /home/wwwlogs/www.995078.com.err;
+	    error_log  /home/wwwlogs/www.995078.com.err;
         access_log  /home/wwwlogs/www.995078.com.log;
     }
